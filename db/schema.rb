@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170102153104) do
+ActiveRecord::Schema.define(version: 20170102164944) do
 
   create_table "backlog_items", force: :cascade do |t|
     t.integer  "ranking"
     t.string   "descripton"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "createdFrom"
   end
 
   create_table "sprints", force: :cascade do |t|

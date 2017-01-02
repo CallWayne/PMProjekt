@@ -2,6 +2,7 @@ class BacklogItemsController < ApplicationController
   before_action :set_backlog_item, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+
   # GET /backlog_items
   # GET /backlog_items.json
   def index
@@ -26,7 +27,6 @@ class BacklogItemsController < ApplicationController
   # POST /backlog_items.json
   def create
     @backlog_item = BacklogItem.new(backlog_item_params)
-
     respond_to do |format|
       if @backlog_item.save
         format.html { redirect_to @backlog_item, notice: 'Backlog item was successfully created.' }
