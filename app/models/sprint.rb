@@ -1,0 +1,3 @@
+class Sprint < ApplicationRecord
+
+end
