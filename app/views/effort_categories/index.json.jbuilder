@@ -1,0 +1,1 @@
+json.array! @effort_categories, partial: 'effort_categories/effort_category', as: :effort_category

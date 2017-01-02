@@ -7,6 +7,9 @@ class BacklogItemsController < ApplicationController
   # GET /backlog_items.json
   def index
     @backlog_items = BacklogItem.all
+    @listHigh = BacklogItem.where(ranking: 0)
+    @listMedium = BacklogItem.where(ranking: 1)
+    @listLow = BacklogItem.where(ranking: 2)
   end
 
   # GET /backlog_items/1

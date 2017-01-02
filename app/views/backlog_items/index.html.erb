@@ -5,21 +5,40 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Ranking</th>
       <th>Descripton</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @backlog_items.each do |backlog_item| %>
+      <% @listHigh.each do |high_item| %>
         <tr>
-          <td><%= backlog_item.ranking %></td>
-          <td><%= backlog_item.descripton %></td>
-          <td><%= link_to 'Show', backlog_item %></td>
-          <td><%= link_to 'Edit', edit_backlog_item_path(backlog_item) %></td>
-          <td><%= link_to 'Destroy', backlog_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= high_item.ranking %></td>
+          <td><%= high_item.descripton %></td>
+          <td><%= link_to 'Show', high_item %></td>
+          <td><%= link_to 'Edit', edit_backlog_item_path(high_item) %></td>
+          <td><%= link_to 'Destroy', high_item, method: :delete, data: {confirm: 'Are you sure?' } %></td>
         </tr>
+      <% end %>
+      <tbody>
+      <% @listMedium.each do |medium_item| %>
+          <tr>
+            <td><%= medium_item.ranking %></td>
+            <td><%= medium_item.descripton %></td>
+            <td><%= link_to 'Show', medium_item %></td>
+            <td><%= link_to 'Edit', edit_backlog_item_path(medium_item) %></td>
+            <td><%= link_to 'Destroy', medium_item, method: :delete, data: {confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      <tbody>
+      <% @listLow.each do |low_item| %>
+          <tr>
+            <td><%= low_item.ranking %></td>
+            <td><%= low_item.descripton %></td>
+            <td><%= link_to 'Show', low_item %></td>
+            <td><%= link_to 'Edit', edit_backlog_item_path(low_item) %></td>
+            <td><%= link_to 'Destroy', low_item, method: :delete, data: {confirm: 'Are you sure?' } %></td>
+          </tr>
       <% end %>
 </table>
 

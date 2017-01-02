@@ -1,0 +1,1 @@
+json.partial! "effort_categories/effort_category", effort_category: @effort_category

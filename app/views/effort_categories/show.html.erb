@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @effort_category.value %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @effort_category.description %>
+</p>
+
+<%= link_to 'Edit', edit_effort_category_path(@effort_category) %> |
+<%= link_to 'Back', effort_categories_path %>

@@ -1,0 +1,27 @@
+<h1>Center</h1>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>E-Mail</th>
+    <th>Roles</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <% if user.roles.first != nil %>
+            <td><%= user.roles.first.name %></td>
+              <% else %>
+                  <td>no role</td>
+                  <td><%= link_to "Scrum Master?", welcome_addScrumMaster_path(:user => user.id), :method => :post, data: { confirm: 'Are you sure?' }%></td>
+                  <td><%= link_to "Product Owner?", welcome_addProductOwner_path(:user => user.id), :method => :post, data: { confirm: 'Are you sure?' }%></td>
+                  <td><%= link_to "Team Member?", welcome_addTeamMember_path(:user => user.id), :method => :post, data: { confirm: 'Are you sure?' }%></td>
+        <% end %>
+        </tr>
+  <% end %>
+  </tbody>
+</table>
