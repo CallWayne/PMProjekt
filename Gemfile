@@ -4,6 +4,7 @@ gem 'devise'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
+gem 'rolify'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -36,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'byebug', '~> 9.0.6'
 end
 
 group :development do

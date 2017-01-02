@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :backlog_items
   resources :sprints
   get 'welcome/index'
 

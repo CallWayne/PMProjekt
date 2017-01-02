@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ranking:</strong>
+  <%= @backlog_item.ranking %>
+</p>
+
+<p>
+  <strong>Descripton:</strong>
+  <%= @backlog_item.descripton %>
+</p>
+
+<%= link_to 'Edit', edit_backlog_item_path(@backlog_item) %> |
+<%= link_to 'Back', backlog_items_path %>

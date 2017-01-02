@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Product Backlog</h2>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Ranking</th>
+      <th>Descripton</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @backlog_items.each do |backlog_item| %>
+        <tr>
+          <td><%= backlog_item.ranking %></td>
+          <td><%= backlog_item.descripton %></td>
+          <td><%= link_to 'Show', backlog_item %></td>
+          <td><%= link_to 'Edit', edit_backlog_item_path(backlog_item) %></td>
+          <td><%= link_to 'Destroy', backlog_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Backlog Item', new_backlog_item_path %>
