@@ -1,5 +1,6 @@
 class SprintsController < ApplicationController
   before_action :set_sprint, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /sprints
   # GET /sprints.json

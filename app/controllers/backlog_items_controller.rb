@@ -1,5 +1,6 @@
 class BacklogItemsController < ApplicationController
   before_action :set_backlog_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /backlog_items
   # GET /backlog_items.json
