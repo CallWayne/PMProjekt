@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170102222808) do
 
-  create_table "backlog_items", force: :cascade do |t|
-    t.integer  "ranking"
-    t.string   "descripton"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "createdFrom"
-  end
-
   create_table "effort_categories", force: :cascade do |t|
     t.integer  "value"
     t.string   "description"
@@ -35,13 +27,6 @@ ActiveRecord::Schema.define(version: 20170102222808) do
     t.datetime "updated_at"
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["name"], name: "index_roles_on_name"
-  end
-
-  create_table "sprints", force: :cascade do |t|
-    t.string   "Name"
-    t.date     "Datum"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

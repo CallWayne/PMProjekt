@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   resources :effort_categories
-  resources :backlog_items
-  resources :sprints
   get 'welcome/index'
   get 'welcome/center'
   post 'welcome/addScrumMaster'
